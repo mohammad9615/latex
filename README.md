@@ -1,4 +1,37 @@
-# latex\documentclass[12pt, a4paper]{article}
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@mohammad9615 
+mohammad9615
+/
+PNU_3991_AR
+1
+00
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+لاتکس
+
+ main
+@mohammad9615
+mohammad9615 committed 16 minutes ago 
+1 parent 231a2b7 commit dddf78df8655fb73125a269c201948b1e43275c4
+Showing  with 217 additions and 0 deletions.
+ 217  latex 
+@@ -1 +1,218 @@
+
+\documentclass[12pt, a4paper]{article}
 \usepackage{xcolor}
 \usepackage{graphicx}%برای تنظیم رنگ هایپرلینک
 \usepackage[colorlinks,linkcolor=red,citecolor=blue]{hyperref}
@@ -215,3 +248,23 @@ is producing output 1, and state $\text{q}_2$ is producing output 2. Now, it is 
 \end{table}
 
 \end{document}
+0 comments on commit dddf78d
+@mohammad9615
+ 
+ 
+Leave a comment
+No file chosen
+New Video support! Upload MP4 and MOV file types. Attach files by dragging & dropping, selecting or pasting them.
+ You’re receiving notifications because you’re watching this repository.
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
