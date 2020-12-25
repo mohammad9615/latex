@@ -1,0 +1,177 @@
+By induction, it is proved that δ
+0
+(q’0
+,x) = [P1, P2,...,Pk] if and only if
+δ
+0
+(q0
+, x) = {P1, P2, ..., Pk}
+So, δ
+0
+(δ
+0
+(q0
+0
+, x), a) = δ
+0
+([P1, P2,...,Pk] , a) = [r1, r2, ..., rk] if and only if
+δ(P1, P2, ..., Pn, a) = δ(P1, a) ∪ (P2, a) ∪ ..... ∪ (Pn, a)
+= r1 ∪ r2 ∪ .... ∪ rk
+Thus δ
+0
+(q0
+0xa) = δ
+0
+(δ
+0
+(q0
+0
+, x)a) == r1 ∪ r2 ∪ .... ∪ rk
+It is proved that the result is true for a string of length n+1, if it is true
+for a string of length n. Now δ
+0
+(q0
+0
+, x) ∈ F
+0 when δ(q0
+, x) to a state of Q in
+F.
+Therefore, it is proved that L(M) = L(M0
+).
+1 Dead State
+The name dead state was mentioned in Example 3.6 of converting an NFA
+to an equivalent DFA. Dead state is a state where the control can enter and
+be confined till the input ended, but there is no way to come out from that
+state. (The string is dead or finished on entering the state.)
+An example for the previous finite automata is shown in Fig. 3.22; from
+q0
+for input 0, there is a path to go to q1
+. But there is no path mentioned
+from q0
+for input 1. The same thing happens also for q2
+for input 0. Now,
+let a string 101 be given as input to the FA to test the acceptability of the
+string by the finite automata.
+According to the condition of the acceptability, the first condition, i.e.,
+the string will be totally traversed, is not fulfilled. Obviously, the second
+condition is also not fulfilled.
+We have to decide that the string is not accepted by the finite automata
+without traversing the string totally!
+1
+For making the string totally traversed, we have to include an extra state,
+say qf
+, where the control will go from the states for which there is only one
+path for one input. In the state qf
+, for the inputs, there will be a self-loop.
+Here, qf
+is the dead state.
+By including the dead state, the finite automata becomes as shown in
+Fig. 3.23.
+Dead state makes the string totally traversed.
+2 Finite Automata with Output
+Till now, we were discussing machines with no output. But two things,
+output and output relations, are omitted. This was mentioned in the characteristics of the automaton. As FA is a machine, it must produce output. In
+this section, we shall discuss finite automata with output. Finite automata
+with output can be divided into two types:
+1. The Mealy machine
+2. The Moore machine
+2.1 The Mealy Machine
+The Mealy machine was proposed by George H. Mealyat the Bell Labs in
+1960.
+2
+The Mealy machine is one type of finite automata with output, where the
+output depends on the present state and the present input.
+The Mealy machine consists of six touples
+M=(Q, Σ, ∆, δ, λ, q0
+),
+where
+• Q : finite non-empty set of states
+• Σ : set of input alphabets
+• ∆ : set of output alphabets
+• δ : transitional function mapping Q × Σ → Q
+• λ : output function mapping Q × Σ → ∆
+• q0
+: beginning state
+2.2 The Moore Machine
+The Moore machine was proposed by Edward F. Moorein IBM around 1960.
+The Moore machine is one type of finite automata where output depends
+on the present state only, but the output is independent of the present input.
+The Moore machine consists of six touples
+M=(Q, Σ, ∆, δ, λ, q0
+),
+• Q : finite non-empty set of states
+• Σ : set of input alphabets
+• ∆ : set of output alphabets
+• δ : transitional function mapping Q × Σ → Q
+• λ : output function mapping Q → ∆
+• q0
+: beginning state
+3
+I/P=0 I/P=1
+Present State Next State O/P Next State O/P
+A D 0 B 0
+B A 1 D 0
+C B 1 A 1
+D D 1 C 0
+Next State
+Present State I/P=0 I/P=1 O/P
+A A B 0
+B A C 0
+C A C 1
+2.3 Tabular and Transitional Representation of the Mealy
+and Moore Machines
+2.3.1 Tabular
+The output of the Mealy machine depends on both the present state and the
+present input. So, for the mealy machine, there will be n number of output
+columns if there are n number of input.
+The tabular format of the Mealy machine is as follows.
+The output of the Moore machine depends on the present state only. As
+in a machine, there is only one present state column, so there is only one
+output column.
+The tabular format of the Moore machine is given in the following table.
+2.3.2 Transitional
+The Mealy machine is one type of finite automata with output. The transitional diagram is like finite automata, but the output is mentioned. As we
+know, the output of a Mealy machine depends on the pres-ent state and the
+present input. So, for a Mealy machine, the transitional arc will be labelled
+with both input and output like the example in Fig. 3.24.
+4
+The output of the Moore machine depends only on the present state. For
+a Moore machine, the states are labelled with the state name and the output
+like the example shown in Fig. 3.25.
+The following are some examples of finite automata with output.
+Example 3.10 Design a Mealy machine to get complement of binary
+number.
+Solution: For input 0, the machine gives the output 1, and for input 1
+the machine will give the output 0. The Mealy machine is constructed as
+shown in Fig. 3.26.
+5
+Example 3.11 Design a Moore machine which determines the residue
+mod-3 for each binary string treated as binary integer.
+Solution: Binary string consists of two types of characters 0 and 1.
+Binary integer means the decimal equivalent of a binary string as integer
+number. Residue mod-3 means the reminder received when the decimal
+equivalent of the binary number is divided by 3.
+If a decimal number is divided by 3, only three types of reminders 0 or
+1 or 2 are generated. The out-put of the Moore machine depends only on
+the present state. So, for three types of reminders (output), three states are
+needed.
+Let us assume that state q0
+is producing output 0, state q1
+is producing
+output 1, and state q2
+is producing output 2. Now, it is needed to construct
+the transitional arcs. Before construction, take a table containing binary
+equivalent of decimal numbers from 0 to 9 and the reminders for each of
+them, when divided by 3.
+Decimal Binary Reminders
+0 0 0
+1 1 1
+2 10 2
+3 11 0
+4 100 1
+5 101 2
+6 110 0
+7 111 1
+8 1000 2
+9 1001 0
+6
